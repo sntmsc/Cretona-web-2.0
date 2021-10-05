@@ -1,0 +1,1001 @@
+body{
+    background-color:rgba(14, 142, 192, 0.582); 
+    margin:0 auto;
+}
+.no-scroll{
+    overflow-y:hidden;
+}
+#navbar{
+    background-color: white;
+    background-image:url(Fondos-de-cielo.jpg);
+    background-size: cover;
+    background-position:center;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 1px rgb(1, 1, 34);
+    z-index:80;
+    position:fixed;
+    width:100%;
+    top:0%;
+}
+
+
+#navbar-container{
+    display:flex;
+    flex-direction: row;
+    height: 3em;
+}
+
+#carritoItem-all{
+    width:3.5em;
+    height:100%;
+    position:relative;
+    cursor: pointer;
+    left:0%;
+}
+#carritoItem-icono{
+    position:absolute;
+    top:10%;
+    width:70%;
+    height:90%;
+}
+#carritoItem-contador{
+    position:absolute;
+    bottom:-40%;
+    left:40%;
+    background-color:rgb(233, 17, 17);
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size:1.5em;
+    text-align: center;
+    width:50%;
+    height:50%;
+}
+
+#navbar-redes{
+    width:40%;
+    height:100%;
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    left:0%;
+    justify-content: flex-end;
+}
+.navbar-redes__items{
+    width:3.5em;
+    height:100%;
+  
+}
+
+.redes-iconos{ 
+    width:70%;
+    height:100%;
+    object-fit: contain;
+}
+#facebook-icono{
+    width:65%;
+}
+#navbar-container__nav{
+    width:50%;
+    height: 100%;
+    align-items: center;
+}
+
+#navbar-desktop__menu{
+    width: 100%;
+    height:100%;
+    list-style: none;
+    position:relative;
+    right: 2em;
+    display:flex;
+    flex-direction: row;
+    margin:0 auto;
+    align-items: center;
+}
+
+#navbar-desktop__menu > li{
+
+    display: inline-block;
+    margin: 0 2em 0 0; 
+}
+
+.navdesktop-menu{
+    color: black;
+    font-family: 'Caveat Brush', cursive;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+.navdesktop-menu:hover,.navdesktop-menu:active,
+ #navdesktop-productos__submenu li:hover,
+ #navdesktop-productos__submenu li:active{
+    color: rgb(143, 16, 16);
+    transition: all 1s;
+}
+.portada-menu__botones{
+    display: flex;
+    height:100%;
+    padding:.2em;
+}
+#navdesktop-menu__productos{
+    padding-bottom:2em;
+    position:relative;
+    top:1em;
+    z-index:50;
+}
+#navdesktop-menu__productos:hover #navdesktop-productos__submenu,#navdesktop-menu__productos:active #navdesktop-productos__submenu{
+    display:block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#navdesktop-productos__submenu{
+    width: 90%;
+    position:absolute;
+    list-style: none;
+    background-color:rgb(255, 255, 255);
+    background-image:url(Fondos-de-cielo.jpg);
+    visibility:hidden; 
+    opacity: 0;
+    border: .5px solid black;
+    border-top:none;
+    border-radius: 3%;
+    left:-2em;
+    top:62%;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#navdesktop-productos__submenu li{
+    display: block;
+    padding: 10px 0 10px 0;
+    color: black;
+    font-family: 'Caveat Brush', cursive;
+    font-size: .9em;
+}
+
+.navmobile-icon__container{
+    width:3em;
+    height:100%;
+    display:flex;
+    align-items:center;
+    margin-left:.5em;
+}
+.navmobile-icon{
+    object-fit:contain;
+    height:70%;
+}
+#menuMobile{
+background-color:rgba(14, 142, 192, 0.582);
+display:flex;
+position:fixed;
+flex-direction:column;
+align-items:center;
+width:100%;
+max-width:100%;
+border-bottom: .1em solid black;
+border-radius:2%;
+box-shadow: 1px .5px .5px .5px rgb(85, 85, 109);
+margin-top:.1em;
+z-index:50;
+}
+.menuMobile-submenu{
+    background-image:url(Fondos-de-cielo.jpg);
+    background-position: 80%;
+    position:relative;
+    height:50%;
+    width:100%;
+    text-align:center;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 1.5em;   
+    -webkit-text-stroke: .5px grey; 
+    padding:.5em;
+    border:.5px solid black;
+    border-left:none;
+    border-right:none;
+}
+
+.menuMobile-productos__flecha{
+    position:absolute;
+    left:87%;
+    width:1em;  
+    height:1em;
+}
+#menuMobile-productos__categorias{
+    display:flex;
+    flex-direction: column;
+    border-top:none;
+}
+
+#menuMobile-quiensoy__link, .menuMobile-productos__link, #menuMobile-inicio__link{ 
+    display:flex;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    text-decoration:none;
+    color:black;
+}
+.menuMobile-productos__categorias{
+    width:100%;
+    margin-top:1em;
+    border:1px solid black;
+    padding:.5em;
+    background-image:url(Fondos-de-cielo.jpg);
+    background-position: 0%;
+    font-family: 'Caveat Brush', cursive;
+    font-size: .9em;   
+    -webkit-text-stroke: .5px grey; 
+}
+
+#carritoProductos-contenedor__capa1{
+    background-color:white;
+    position:fixed;
+    top:0%;
+    right:0%;
+    width: 20em;
+    height:75%;
+    border-radius:2%;
+    z-index: 100;
+}
+
+#carritoProductos-close{
+    font-size:2em;
+    font-family:sans-serif;
+    position:absolute;
+    left:90%;
+    cursor:pointer;
+}
+#carritoProductos-contenedor__capa2{
+   
+    position:absolute;
+    width:100%;
+    height:65%;
+    max-height:70%;
+    overflow-y:scroll;
+    top:11%;
+}
+.carritoProductos-contenedor__capa3{
+    background-color:pink;
+    width:99%;
+    height:32%;
+    position:relative;
+    border:.5px solid black;
+}
+.carritoProductos-contenedor__img{
+    border:.5px solid black;
+    position:absolute;
+    left:5%;
+    width:30%;
+    height:80%;
+    top:10%;
+}
+.carritoProductos-imgItem{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+}
+.carritoProductos-contenedor__nombreItem{
+    position:absolute;
+    left:35%;
+    top:5%;
+    width:40%;
+    height:80%;
+    display:flex;
+    padding:2%;
+    justify-content: center;
+    text-align:center;
+
+}
+.carritoProductos-nombreItem{
+    font-family: 'Caveat Brush', cursive;
+    font-size:1.5em;
+}
+.carritoProductos-contenedor__precioCancelacion{
+    position:absolute;
+    left:78%;
+    top:7%;
+    width:20%;
+    height:90%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.carritoProductos-precioItem{
+    font-family: 'Caveat Brush', cursive;
+    margin-bottom:1em;
+}
+.carritoProductos-cancelacion{
+    width:40%;
+    height:30%;
+    cursor:pointer;
+
+}
+#carritoProductos-contenedor__total{
+    position:absolute;
+    top:77%;
+    width:100%;
+    height:10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#carritoProductos-total{
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size:2em;
+    
+}
+#carritoProductos-contenedor__comprar{
+    position:absolute;
+    top:87%;
+    width:100%;
+    height:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#carritoProductos-link__comprar{ 
+    display:flex;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    text-decoration:none;
+}
+#carritoProductos-comprar{
+
+    width:35%;
+    height:90%;
+    background-color:#e45e4a;
+    border-radius:10%;
+    box-shadow: 0 0 0 .5px rgb(1, 1, 1),
+    0 1px .5em;
+    cursor:pointer;
+    font-family: 'Righteous', cursive;
+}
+
+/* FOOTER */ 
+
+#footer-contenedor{
+    border-top: 1px solid transparent;
+    box-shadow: 5px 5px 5px 6px rgb(2, 2, 34);
+    height: 25em;
+    width:100%;
+    background-color:rgba(47, 52, 56, 0.582);
+    background-image:url(Fondos-de-cielo.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction:column;
+    position:relative;
+    
+    
+}
+
+#footer-contenedor__menu{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+}
+
+.footer-subcontenedor{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: .5em;
+}
+#footer-contenedor__izqder{
+    display:flex;
+}
+#footer-contenedor__derecha{
+    margin-left:2em;
+}
+#footer-contenedor__webpage{
+    position:relative;
+    left:0%;
+    top:10%;
+    height:2em;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+}
+
+#footer-webpage__creador-span{
+    margin:.5em;
+    font-size:1.1em;
+    font-family: 'Caveat Brush', cursive;
+    position:absolute;
+    top:0%;
+    height:1.5em;
+}
+
+
+.footer-titulo{
+    font-size:1.2em;
+    font-weight: 700;
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    margin-bottom:.3em;
+
+}
+.footer-items{
+    font-size:1.2em;
+    font-family: 'Patrick Hand', cursive;
+}
+.footer-links{
+    text-decoration: none;
+    color:black;
+}
+#footer-contacto__redes, #footer-mobile_mediosDePago{
+    text-align:end;
+}
+
+/* SLIDERS */ 
+#muestra{
+    position:relative;
+    top:5em;
+}
+#muestra-slider{
+    display:flex;
+    height:23rem;
+    margin-left:-100%;
+}
+
+.muestra-slider__section{
+    width:100%;
+
+}
+ 
+.muestra-contenedor, #carousel-container{
+    width:90%; 
+    max-width:600px;
+    margin:auto; 
+    overflow:hidden;
+    box-shadow: 0 0 0 1px rgb(2, 2, 2),
+                0 10px 2.5em;
+    position:relative;
+}
+
+#carousel-container{
+    background-color: black;
+    position:fixed;
+    z-index:100;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:60%;
+    width:98%;
+}
+
+.slider-section__img, #carousel-img{
+    display:block;
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+}
+.carousel-img__noloaded{
+    opacity:0;
+    transition: all .5s;
+}
+.carousel-img__loaded{
+    opacity:1;
+    transition: all .5s;
+}
+
+.carousel__btn{
+    position:absolute;
+    top:50%;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    width:2em;
+    height:2em;
+    background:#969494;
+    transition: all .5s;
+    border-radius: 50%;
+    cursor:pointer;
+}
+
+#carousel__x{
+    font-size: 3em;
+    font-family: monospace;
+    text-align: center;
+    position: absolute;
+    top:0%;
+    right:10px;
+    cursor:pointer;
+}
+
+.carousel__btn:active{
+    opacity: 100%;
+    transition: all .5s;
+    background:#FFF;
+    }
+
+#carousel-btn__izq{
+    left:10px;
+}
+#carousel-btn__der{
+    right:10px;
+}
+#carousel-outBackground{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index:50;
+}
+/* INDEX */ 
+
+#presentacion{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:100%;
+    margin: 1em 0;
+    position:relative;
+    top:4em;
+}
+
+#presentacion-contenedor{
+    position:relative;
+    display:flex; 
+    width:100%;
+    justify-content: center;
+}
+#presentacion-link{
+    position:absolute;
+    top:10%;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    left:27%;
+    z-index:50;
+}
+
+#presentacion-contenedor__img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+    position:relative;
+    top:0%;
+ 
+    
+}
+
+#presentacion-frase{
+    color:#000000;
+    font-size: 1.5em;
+    font-family: 'Waiting for the Sunrise', cursive;
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
+    position:relative;
+    bottom:1em;
+    margin:0 auto;
+}
+
+#categorias{
+    margin: 10% 0 10% 0;
+    position:relative;
+    top:7em;
+}
+#categorias-contenedor{
+    display:flex;
+    justify-content: center;
+    max-width:100%;
+    width:80%;
+    margin:0 auto;
+}
+.categorias-contenedor__a{
+    background-color:rgba(73, 101, 112, 0.582);
+    font-family: 'Caveat Brush', cursive;
+    font-size: 1.5em;
+    border:1px solid black;
+    height: 1.1em;
+    width:23%;
+    display: flex;
+    justify-content: center;
+    margin: 0 2% 0 2%;
+    padding: 2% 2% 2% 2%;
+    box-shadow: 0 0 0 1px rgb(26, 62, 77); 
+    text-decoration:none;
+}
+.categorias-contenedor__span{
+    color: black;
+}
+
+.categorias-contenedor__a:hover{
+    background-color:rgba(29, 57, 68, 0.582);
+}
+
+
+#envio{
+    display:flex;
+    justify-content: center;
+    position:relative;
+    top:8em;
+}
+#envio-contenedor{
+    width:80%;
+    height:15em;
+    margin-bottom:10%;
+    display: flex;
+    justify-content: center;
+    position:relative;
+    
+}
+#envio-contenedor__coche{
+    width:30%;
+    height:30%;
+    position:absolute;
+    
+}
+#envio-contenedor__calle{
+    width:calc(80px / 0.707);
+    height:1em;
+    background: repeating-linear-gradient(-45deg, currentColor 0 15px,#0000 0 20px) left/200% 100%;
+    animation:i3 2s infinite linear;
+    position:absolute;
+    margin-top:4em;
+  }
+
+  @keyframes i3 {
+      100% {background-position:right}
+
+}
+
+#envio-contenedor__texto-envio{
+    position:absolute;
+    margin-top: 5em;
+    font-size: 1.5em;
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+}
+
+#pago-mobile{
+    display:flex;
+    justify-content: center;
+    margin-top:5em;
+    position:relative;
+    top:5em;
+}
+#pago-desktop{
+    display:flex;
+    justify-content: center;
+}
+
+.pago-contenedor{
+    width:80%;
+    height:18em;
+    display: flex;
+    justify-content: center;
+}
+
+.pago-subcontenedor{
+    display:flex;
+    align-items:center;
+    margin:0 1em 0 1em; 
+    flex-direction: column;
+}
+
+.pago-subcontenedor > span{
+
+    font-family: 'Patrick Hand', cursive;
+    font-weight:500;
+    font-size: 1em;
+    text-align: center;
+}
+
+.pago__img{
+    width:3em;
+    height:3em;
+    margin:0 1em 0 1em;
+}
+
+
+
+
+/* QUIEN SOY */
+
+#quiensoy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:10em;
+    position:relative;
+    top:5em;
+}
+.quiensoy-contenedorseccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quiensoy-contenedordeimg{
+    border:5px solid rgba(38, 85, 104, 0.582);
+    display:flex;
+    width:10em;
+    height: 10em;
+    position:relative;
+}
+.quiensoy-contenedor__img{
+    position:absolute;
+    display: block;
+    object-fit:cover;
+    width:100%;
+    height:100%;
+    
+}
+
+#quiensoy > div > div > h2, .productos-contenedor>h2{
+    font-family: 'Amatic SC', cursive; 
+    font-weight: 500;
+    font-size: 2.5em;
+}
+#quiensoy> div > div > span, #quiensoy > span {
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 500;
+    font-size: 1.3em;
+    margin:1em 2em;     
+}
+#quiensoy>span{
+    font-family: 'Patrick Hand', cursive;
+    margin-top:3em;
+    font-size: 1.5em;
+    font-weight:600;
+    text-shadow: 0.5px 0.5px rgb(59, 59, 59);
+} 
+
+/* PRODUCTOS */ 
+
+#productos{
+position:relative;
+top:5em;
+}
+.productos-contenedor{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.productos-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 0 15em 0;
+    justify-content: center;
+}
+
+.productos-galeria__contenedores{ 
+   width:20em;
+   height:25em;
+   margin:.5em;
+   margin-bottom:5em;
+   align-items: center;
+   text-align:center;
+   display: flex;
+   flex-direction: column;
+}
+.productos-galeria__imgs{
+    width:80%;
+    height:80%;
+    transition:all .1s;
+    border:1px solid #333;
+    box-shadow:0 0 0 1px rgb(0, 0, 0);
+}
+.productos-galeria__imgs:hover, .productos-galeria__imgs:active{
+    width:82%;
+    height:82%;
+    transition:all .1s;
+    cursor:pointer;
+}
+.productos-galeria__descripcion{
+    font-family: 'Righteous', cursive;
+    font-style: oblique;
+    font-size:1em;
+    margin:.5em;
+}
+
+.productos-galeria__agregarCarrito{
+    font-family: 'Righteous', cursive;
+    font-size:1em;
+    background-image:url(Fondos-de-cielo.jpg);
+    background-position:80%;
+    color:blanchedalmond;
+    border-radius:5%;
+    border-color: #254768;
+    border-width: 3px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 750px) { 
+    
+    .navdesktop-menu{
+        font-size:1.4em;
+        padding:.5rem;
+    }
+    #navdesktop-productos__submenu{
+        top:65%;
+    }
+    #navdesktop-productos__submenu li{
+        font-size:1.3em;
+    }
+    #navbar-redes{
+        left:3%;
+    }
+    #carritoItem-all{
+        left:3%;
+    }
+    #presentacion-contenedor{ 
+        width:100%;
+        height:21em;
+        
+    }
+
+    #presentacion-link{
+        top:10%;
+        width:45%;
+        height:80%;
+    }
+    
+    #presentacion-contenedor__img{
+        position: relative;
+        object-fit:contain;
+        width:80%;
+        height:80%;
+        left:1%;
+        
+    }
+    
+    #presentacion-frase{
+        font-size: 2em;
+        bottom: 3em;    
+    }
+    #envio{
+        top:1em;
+    }
+    
+
+   
+    .pago-subcontenedor > span{
+        font-size: 1.2em;
+    }
+        
+    .pago__img{
+        width:4em;
+        height:4em;
+    }
+
+    #footer-contenedor{
+        height:20em;
+    }
+
+    #footer-contenedor__pagos-desktop{
+        display: flex;
+        height:4em;
+    }
+  
+    .footer-contenedor__izqder{
+        margin-left:1em;
+    }
+
+    #footer-contenedor__webpage{
+        position:absolute;
+        height:2em;
+        top:87%;
+    }
+    #footer-webpage__creador-span{
+        font-size:1.5em;
+        margin:0 .5em;
+    }
+    
+    .footer-titulo{
+        font-size:1.5em;
+        
+    }
+    .footer-items{
+        font-size: 1.3em;
+    }
+    
+    #quiensoy>span{
+        font-size: 1.5em;
+        font-weight:600;
+        text-shadow: 0.5px 0.5px rgb(59, 59, 59);
+        margin-top:5em;
+    }
+
+    #quiensoy > div > div > h2, .productos-contenedor>h2{
+        font-size:3em;
+    }
+    #quiensoy> div > div > span, #quiensoy > span {
+        max-width:30%;
+    }
+
+    #carousel-container{
+        height:80%;
+    }
+}
+
+@media only screen and (min-width: 1250px){
+
+    #navbar-redes{
+        left:4%;
+    }
+    #carritoItem-all{
+        left:6%;
+    }
+    #presentacion-contenedor{ 
+        height:23em;
+        
+    }
+    #quiensoy{
+        justify-content: space-around;
+        align-items: center;
+        position:relative;
+        top:5em;
+        height:40em;
+    }
+    #quiensoy-contenedortotal{
+        display: flex;
+        gap:10em;
+    }
+    .quiensoy-contenedorseccion{
+        display:flex;
+        flex:1;
+        padding:20px;
+        margin:0 3em;
+        border: 1px transparent;
+        box-shadow: 1px 2px 7px 2px rgb(14, 14, 56);
+        background-color: rgba(4, 60, 82, 0.582); 
+    }
+    .quiensoy-contenedordeimg{
+        display: flex;
+        flex-direction: column;
+    }
+    #quiensoy>span{
+        margin:5em 20em 1em 20em;
+    }
+
+    #footer-contenedor__webpage{
+        position:relative;
+        left:0%;
+        top:-47%;
+        height:10em;
+        width:100%;
+        display:flex;
+        flex-direction: row;
+    }
+
+    #footer-webpage__creador-span{
+        top:100%;
+    }
+
+    #footer-webpage__logo-contenedor{
+        display:flex;
+        width:25em;
+        height:25em;
+        position:relative;
+        bottom:12.35em;
+        left:35%;
+        overflow-y: hidden;
+        margin-left:10%;
+    
+    }
+
+    #footer-webpage__logo-img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position:top left;
+        position:relative;
+        top:10%;
+    }
+
+}
