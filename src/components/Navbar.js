@@ -15,8 +15,11 @@ const NavbarMenu = () => {
       <nav id="navbar-container__nav"> 
       {noEsMobile && 
         <ul id="navbar-desktop__menu">
+            <Link to='/' style={{textDecoration: 'none'}}>
+              <li id="navdesktop-menu__inicio" className="navdesktop-menu" >Inicio</li>
+            </Link>
             <li id="navdesktop-menu__productos">
-              <span style={{cursor:"pointer"}} className="navdesktop-menu">Mis productos</span>
+              <span style={{cursor:"pointer"}} id="navdesktop-productos__texto" className="navdesktop-menu">Mis productos</span>
                     <ul id="navdesktop-productos__submenu">
                       <Link to='/adultxs' style={{textDecoration: 'none'}}>
                         <li>Adultxs</li>
@@ -24,13 +27,13 @@ const NavbarMenu = () => {
                       <Link to='/juveniles' style={{textDecoration: 'none'}}>
                         <li>Juveniles</li> 
                       </Link>
-                      <Link to='/niñxs' style={{textDecoration: 'none'}}>
+                      <Link to='/ninxs' style={{textDecoration: 'none'}}>
                         <li>Niñxs</li>
                       </Link>
                     </ul>
             </li>
           <Link to='/quiensoy' style={{textDecoration: 'none'}}>
-            <li className="navdesktop-menu">¿Quién soy?</li>
+            <li id="navdesktop-menu__quiensoy" className="navdesktop-menu">¿Quién soy?</li>
           </Link>
         </ul>
         }
@@ -53,18 +56,18 @@ const NavbarMenu = () => {
     return(
       <div id="navbar-redes">
         <span id="redes-whatsapp" className="navbar-redes__items"> 
-            <a href="https://wa.me/542234115451">
-                <img src={"/icons/Whatsapp.ico"} id="whatsapp-icono" className="redes-iconos" alt="icono de Whatsapp"/>
+            <a href="https://wa.me/542234115451" className="navbar-redes__link">
+                <img src={"/icons/whatsapp-icon.png"} id="whatsapp-icono" className="redes-iconos" alt="icono de Whatsapp"/>
             </a>
         </span>
         <span id="redes-facebook" className="navbar-redes__items">
-            <a href="https://www.facebook.com/pg/cretonatienda-109876870363690/">
-                <img src={"/icons/facebook.png"} id="facebook-icono" className="redes-iconos" alt="icono de Facebook"/>
+            <a href="https://www.facebook.com/pg/cretonatienda-109876870363690/" className="navbar-redes__link">
+                <img src={"/icons/face.png"} id="facebook-icono" className="redes-iconos" alt="icono de Facebook"/>
             </a>
         </span>
         <span id="redes-instagram" className="navbar-redes__items"> 
-            <a href="https://www.instagram.com/cretona.socks/">
-                <img src={"/icons/instagram.svg"} id="instagram-icono" className="redes-iconos" alt="icono de Instagram"/>
+            <a href="https://www.instagram.com/cretona.socks/" className="navbar-redes__link">
+                <img src={"/icons/instagram.png"} id="instagram-icono" className="redes-iconos" alt="icono de Instagram"/>
             </a>
         </span>
       </div>

@@ -40,7 +40,7 @@ const App = () => {
         <Route path="/juveniles">
            <Productos googSheet={sheetJuveniles} category={'Juveniles'}/> 
         </Route>
-        <Route path="/niñxs">
+        <Route path="/ninxs">
            <Productos googSheet={sheetNiñxs} category={'Niñxs'}/> 
         </Route>
 

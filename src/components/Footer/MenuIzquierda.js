@@ -38,7 +38,7 @@ import {Link} from 'react-router-dom'
             <Link className="footer-links" to='/juveniles'>
             <span className="footer-items" id="footer-productos__juveniles">Juveniles</span>
             </Link>
-            <Link className="footer-links" to='/niñxs'>
+            <Link className="footer-links" to='/ninxs'>
             <span className="footer-items" id="footer-productos__niñxs">Niñxs</span>
             </Link>
         </div>

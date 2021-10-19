@@ -12,7 +12,7 @@ import React from 'react'
                   <span className="footer-items" id="footer-contacto__Whatsapp">Whatsapp</span>
                 </a>
                 <a className="footer-links" href="/#">
-                  <span className="footer-items" id="footer-contacto__celular">(223) 4115451</span>
+                  <span className="footer-items" id="footer-contacto__celular">(2262) 411545</span>
                 </a>
             </div>
     )

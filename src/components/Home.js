@@ -24,23 +24,6 @@ const VisorAutomaticoImgs = ({imgs}) => {
                 }
             }
     }
-    
-   /* function anterior(){
-        if(muestraSlider.current.children.length > 0){
-
-            const indexImg = muestraSlider.current.children.length - 1;
-            const ultima = muestraSlider.current.children[indexImg];
-
-            muestraSlider.current.style.marginLeft = "0%";
-            muestraSlider.current.style.transition = "all 0.5s";
-            setTimeout( () => {
-                muestraSlider.current.style.transition = "none";
-                muestraSlider.current.insertBefore(ultima, muestraSlider.current.firstChild)
-                muestraSlider.current.style.marginLeft = "-100%";
-            },500);
-            
-        }
-    }*/
 
     useEffect( () => {
         setInterval( () => {
@@ -80,7 +63,7 @@ const HomeCategorias = () => {
                 <Link to='/juveniles' className="categorias-contenedor__a"> 
                     <span className="categorias-contenedor__span" id="categorias__juveniles">Juveniles</span>
                 </Link> 
-                <Link to='/niñxs' className="categorias-contenedor__a"> 
+                <Link to='/ninxs' className="categorias-contenedor__a"> 
                     <span className="categorias-contenedor__span" id="categorias__niñxs">Niñxs</span>
                 </Link>
             </div>
@@ -122,7 +105,7 @@ const HomePago = () => {
 }
 
 const Home = () => {
-    const EsMobile = useMediaQuery({ query: '(max-width:850px)' })
+    const EsMobile = useMediaQuery({ query: '(max-width:750px)' })
 
     
     const [imgs, setImgs] = useState([])
@@ -142,8 +125,8 @@ const Home = () => {
                   
     return(
       <>
-    <VisorAutomaticoImgs imgs={imgs} />
     <HomeCategorias/>
+    <VisorAutomaticoImgs imgs={imgs} />
     <HomeEnvio/>
     {EsMobile && 
         <HomePago/>

@@ -30,6 +30,8 @@ export const MenuMobile = () => {
             opacity: '0',
             top: '-100%',
             transition: 'all .7s'}
+    
+
     return(
             <div id="menuMobile" style={estiloCondicionado()}>
                 <Link id="menuMobile-inicio__link" to="/">
@@ -53,7 +55,7 @@ export const MenuMobile = () => {
                                 <Link className="menuMobile-productos__link" to="/juveniles" onClick={close}>
                                     <span className="menuMobile-productos__categorias" id="menuMobile-productos__juveniles">Juveniles</span>
                                 </Link>
-                                <Link className="menuMobile-productos__link" to="/niñxs" onClick={close}>
+                                <Link className="menuMobile-productos__link" to="/ninxs" onClick={close}>
                                     <span className="menuMobile-productos__categorias" id="menuMobile-productos__niñxs">Niñxs</span>
                                 </Link>
                             </div>

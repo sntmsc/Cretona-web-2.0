@@ -17,7 +17,9 @@ const CarritoLogo = () => {
     return(
         
         <span id="carritoItem-all" onClick={abrirCarrito}>
-            <img src="/icons/carrito.png" id="carritoItem-icono" alt="carrito de compras"/>
+            <span id="carritoItem-icono__contenedor">
+                <img src="/icons/CarritoCompras.png" id="carritoItem-icono" alt="carrito de compras"/>
+            </span>
             <p id="carritoItem-contador"> {compras.length}</p>
         </span>
         

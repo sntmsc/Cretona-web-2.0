@@ -1,13 +1,13 @@
+
 body{
-    background-color:rgba(14, 142, 192, 0.582); 
+    background-color:#FFF;
     margin:0 auto;
 }
 .no-scroll{
     overflow-y:hidden;
 }
 #navbar{
-    background-color: white;
-    background-image:url(Fondos-de-cielo.jpg);
+    background-color:rgb(168, 218, 220,0.9);
     background-size: cover;
     background-position:center;
     border-bottom: 1px solid transparent;
@@ -18,37 +18,48 @@ body{
     top:0%;
 }
 
-
 #navbar-container{
     display:flex;
     flex-direction: row;
     height: 3em;
+    
 }
 
 #carritoItem-all{
     width:3.5em;
-    height:100%;
+    height:120%;
     position:relative;
     cursor: pointer;
-    left:0%;
+    right:1%;
+    align-items:center;
+}
+#carritoItem-icono__contenedor{
+    display:flex;
+    height:100%;
+    width:100%;
+    position:relative;
+    bottom:5%;
 }
 #carritoItem-icono{
-    position:absolute;
-    top:10%;
-    width:70%;
-    height:90%;
+    width:100%;
+    height:100%;
+    object-fit: cover;
 }
 #carritoItem-contador{
     position:absolute;
-    bottom:-40%;
-    left:40%;
+    display:flex;
+    bottom:-8%;
+    left:50%;
     background-color:rgb(233, 17, 17);
+    border:black 1px solid;
     border-radius: 50%;
+    font-family:Arial, Helvetica, sans-serif;
     font-weight: bolder;
-    font-size:1.5em;
-    text-align: center;
-    width:50%;
-    height:50%;
+    font-size:.9em;
+    justify-content:center;
+    align-items:center;
+    width:35%;
+    height:35%;
 }
 
 #navbar-redes{
@@ -57,23 +68,43 @@ body{
     position:relative;
     display: flex;
     flex-direction: row;
-    left:0%;
+    left:-5%;
     justify-content: flex-end;
+    align-items:center;
+    padding:0;
+}
+.navbar-redes__link{
+    padding:0;
+    margin:0;
+    height:100%;
+    display:flex;
+    align-items:center;
 }
 .navbar-redes__items{
-    width:3.5em;
+    width:3.1em;
     height:100%;
+    position:relative;
+    top:5%;
+    overflow:hidden;
   
 }
 
 .redes-iconos{ 
-    width:70%;
+    width:100%;
     height:100%;
-    object-fit: contain;
+    object-fit: cover;
 }
-#facebook-icono{
-    width:65%;
+
+#redes-whatsapp{
+    height:71%;
+    position:relative;
+    left:.5%;
 }
+#whatsapp-icono{
+    height:100%;
+    object-fit:contain;
+}
+
 #navbar-container__nav{
     width:50%;
     height: 100%;
@@ -91,7 +122,9 @@ body{
     margin:0 auto;
     align-items: center;
 }
-
+#navdesktop-menu__inicio{
+    margin-right:1em;
+}
 #navbar-desktop__menu > li{
 
     display: inline-block;
@@ -117,10 +150,20 @@ body{
     padding:.2em;
 }
 #navdesktop-menu__productos{
+    padding:0;
     padding-bottom:2em;
+    text-align:start;
     position:relative;
     top:1em;
     z-index:50;
+}
+#navdesktop-productos__texto{
+    text-align: end;
+    padding:0;
+}
+#navdesktop-menu__quiensoy{
+    margin:0;
+    padding:0;
 }
 #navdesktop-menu__productos:hover #navdesktop-productos__submenu,#navdesktop-menu__productos:active #navdesktop-productos__submenu{
     display:block;
@@ -133,14 +176,13 @@ body{
     width: 90%;
     position:absolute;
     list-style: none;
-    background-color:rgb(255, 255, 255);
-    background-image:url(Fondos-de-cielo.jpg);
+    background-color:rgb(168, 218, 220,0.6);
     visibility:hidden; 
     opacity: 0;
     border: .5px solid black;
     border-top:none;
     border-radius: 3%;
-    left:-2em;
+    left:-1em;
     top:62%;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
 }
@@ -165,21 +207,20 @@ body{
     height:70%;
 }
 #menuMobile{
-background-color:rgba(14, 142, 192, 0.582);
-display:flex;
-position:fixed;
-flex-direction:column;
-align-items:center;
-width:100%;
-max-width:100%;
-border-bottom: .1em solid black;
-border-radius:2%;
-box-shadow: 1px .5px .5px .5px rgb(85, 85, 109);
-margin-top:.1em;
-z-index:50;
+    background-color:rgb(168, 218, 220,0.9);
+    display:flex;
+    position:fixed;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    max-width:100%;
+    border-bottom: .1em solid black;
+    border-radius:2%;
+    box-shadow: 1px .5px .5px .5px rgb(85, 85, 109);
+    margin-top:.1em;
+    z-index:50;
 }
 .menuMobile-submenu{
-    background-image:url(Fondos-de-cielo.jpg);
     background-position: 80%;
     position:relative;
     height:50%;
@@ -193,6 +234,9 @@ z-index:50;
     border-left:none;
     border-right:none;
 }
+#menuMobile-productos{
+    margin:0;
+}
 
 .menuMobile-productos__flecha{
     position:absolute;
@@ -205,6 +249,9 @@ z-index:50;
     flex-direction: column;
     border-top:none;
 }
+#menuMobile-productos__adultxs{
+    margin-top:.5em;
+}
 
 #menuMobile-quiensoy__link, .menuMobile-productos__link, #menuMobile-inicio__link{ 
     display:flex;
@@ -216,14 +263,13 @@ z-index:50;
 }
 .menuMobile-productos__categorias{
     width:100%;
-    margin-top:1em;
     border:1px solid black;
     padding:.5em;
-    background-image:url(Fondos-de-cielo.jpg);
+    background-color:rgba(130, 206, 209, 0.9);
     background-position: 0%;
     font-family: 'Caveat Brush', cursive;
-    font-size: .9em;   
-    -webkit-text-stroke: .5px grey; 
+    font-size: .8em;   
+    -webkit-text-stroke: .5px rgb(83, 83, 83); 
 }
 
 #carritoProductos-contenedor__capa1{
@@ -235,6 +281,7 @@ z-index:50;
     height:75%;
     border-radius:2%;
     z-index: 100;
+    border: 1px solid black;
 }
 
 #carritoProductos-close{
@@ -254,7 +301,7 @@ z-index:50;
     top:11%;
 }
 .carritoProductos-contenedor__capa3{
-    background-color:pink;
+    background-color:#f1faee;
     width:99%;
     height:32%;
     position:relative;
@@ -343,7 +390,7 @@ z-index:50;
 
     width:35%;
     height:90%;
-    background-color:#e45e4a;
+    background-color:#e63946;
     border-radius:10%;
     box-shadow: 0 0 0 .5px rgb(1, 1, 1),
     0 1px .5em;
@@ -358,8 +405,9 @@ z-index:50;
     box-shadow: 5px 5px 5px 6px rgb(2, 2, 34);
     height: 25em;
     width:100%;
-    background-color:rgba(47, 52, 56, 0.582);
-    background-image:url(Fondos-de-cielo.jpg);
+   
+    background-color:#a8dadc;
+    background-position-y: 100%;
     background-size: cover;
     display: flex;
     flex-direction:column;
@@ -406,7 +454,6 @@ z-index:50;
     height:1.5em;
 }
 
-
 .footer-titulo{
     font-size:1.2em;
     font-weight: 700;
@@ -430,7 +477,7 @@ z-index:50;
 /* SLIDERS */ 
 #muestra{
     position:relative;
-    top:5em;
+    top:8em;
 }
 #muestra-slider{
     display:flex;
@@ -536,7 +583,6 @@ z-index:50;
     align-items:center;
     flex-direction:column;
     width:100%;
-    margin: 1em 0;
     position:relative;
     top:4em;
 }
@@ -545,44 +591,23 @@ z-index:50;
     position:relative;
     display:flex; 
     width:100%;
+    height:50%;
     justify-content: center;
+    border-bottom: 1px solid black;
 }
-#presentacion-link{
-    position:absolute;
-    top:10%;
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    left:27%;
-    z-index:50;
-}
+
 
 #presentacion-contenedor__img{
     width:100%;
     height:100%;
-    object-fit:contain;
-    object-position:center;
-    position:relative;
-    top:0%;
- 
-    
+    object-fit:contain;   
 }
 
-#presentacion-frase{
-    color:#000000;
-    font-size: 1.5em;
-    font-family: 'Waiting for the Sunrise', cursive;
-    -webkit-text-stroke: .5px rgb(0, 0, 0);
-    position:relative;
-    bottom:1em;
-    margin:0 auto;
-}
 
 #categorias{
     margin: 10% 0 10% 0;
     position:relative;
-    top:7em;
+    top:4em;
 }
 #categorias-contenedor{
     display:flex;
@@ -592,16 +617,17 @@ z-index:50;
     margin:0 auto;
 }
 .categorias-contenedor__a{
-    background-color:rgba(73, 101, 112, 0.582);
+    background-color:#e63946;
     font-family: 'Caveat Brush', cursive;
     font-size: 1.5em;
     border:1px solid black;
+    border-radius:6px;
     height: 1.1em;
     width:23%;
     display: flex;
     justify-content: center;
     margin: 0 2% 0 2%;
-    padding: 2% 2% 2% 2%;
+    padding: 2% 5% 2% 5%;
     box-shadow: 0 0 0 1px rgb(26, 62, 77); 
     text-decoration:none;
 }
@@ -609,7 +635,7 @@ z-index:50;
     color: black;
 }
 
-.categorias-contenedor__a:hover{
+.categorias-contenedor__a:hover,.productos-galeria__agregarCarrito:hover, #carritoProductos-comprar:hover{
     background-color:rgba(29, 57, 68, 0.582);
 }
 
@@ -618,7 +644,7 @@ z-index:50;
     display:flex;
     justify-content: center;
     position:relative;
-    top:8em;
+    top:15em;
 }
 #envio-contenedor{
     width:80%;
@@ -635,6 +661,7 @@ z-index:50;
     position:absolute;
     
 }
+
 #envio-contenedor__calle{
     width:calc(80px / 0.707);
     height:1em;
@@ -643,9 +670,9 @@ z-index:50;
     position:absolute;
     margin-top:4em;
   }
-
+  
   @keyframes i3 {
-      100% {background-position:right}
+    100% {background-position:right}
 
 }
 
@@ -662,7 +689,7 @@ z-index:50;
     justify-content: center;
     margin-top:5em;
     position:relative;
-    top:5em;
+    top:10em;
 }
 #pago-desktop{
     display:flex;
@@ -714,9 +741,10 @@ z-index:50;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width:35em;
 }
 .quiensoy-contenedordeimg{
-    border:5px solid rgba(38, 85, 104, 0.582);
+    border:5px solid #cdd8c9;
     display:flex;
     width:10em;
     height: 10em;
@@ -804,19 +832,20 @@ top:5em;
 
 .productos-galeria__agregarCarrito{
     font-family: 'Righteous', cursive;
-    font-size:1em;
-    background-image:url(Fondos-de-cielo.jpg);
+    background-color:#f1faee;
     background-position:80%;
-    color:blanchedalmond;
+    color: black;
     border-radius:5%;
-    border-color: #254768;
+    border-color: #3a3b3b;
     border-width: 3px;
     border-style: solid;
     cursor: pointer;
 }
 
 @media only screen and (min-width: 750px) { 
-    
+    #navbar{
+        background-color:rgb(168, 218, 220,0.6);
+    }
     .navdesktop-menu{
         font-size:1.4em;
         padding:.5rem;
@@ -828,42 +857,38 @@ top:5em;
         font-size:1.3em;
     }
     #navbar-redes{
-        left:3%;
+        left:0%;
     }
     #carritoItem-all{
         left:3%;
     }
+    #presentacion{
+        top:3em;
+    }
     #presentacion-contenedor{ 
-        width:100%;
-        height:21em;
+        width:60%;
+        height:50%;
         
     }
 
-    #presentacion-link{
-        top:10%;
-        width:45%;
-        height:80%;
-    }
-    
     #presentacion-contenedor__img{
         position: relative;
-        object-fit:contain;
-        width:80%;
-        height:80%;
-        left:1%;
+        object-fit:cover;
         
     }
-    
-    #presentacion-frase{
-        font-size: 2em;
-        bottom: 3em;    
+    #categorias{
+        top:0;
+    }
+    .categorias-contenedor__a{
+        width:10%;
+    }
+    #muestra{
+        top:0;
     }
     #envio{
-        top:1em;
+        top:7em;
     }
     
-
-   
     .pago-subcontenedor > span{
         font-size: 1.2em;
     }
@@ -915,7 +940,7 @@ top:5em;
         font-size:3em;
     }
     #quiensoy> div > div > span, #quiensoy > span {
-        max-width:30%;
+        max-width:50%;
     }
 
     #carousel-container{
@@ -931,15 +956,21 @@ top:5em;
     #carritoItem-all{
         left:6%;
     }
-    #presentacion-contenedor{ 
-        height:23em;
-        
+    #carritoProductos-contenedor__capa1{
+        height:70%;
+    }
+    .muestra-contenedor{
+        max-width:35em;
+        height:30em;
+    }
+    #muestra-slider{
+        height:30em;
     }
     #quiensoy{
         justify-content: space-around;
         align-items: center;
         position:relative;
-        top:5em;
+        top:7em;
         height:40em;
     }
     #quiensoy-contenedortotal{
@@ -953,7 +984,7 @@ top:5em;
         margin:0 3em;
         border: 1px transparent;
         box-shadow: 1px 2px 7px 2px rgb(14, 14, 56);
-        background-color: rgba(4, 60, 82, 0.582); 
+        background-color: #f1faee;
     }
     .quiensoy-contenedordeimg{
         display: flex;
@@ -963,10 +994,17 @@ top:5em;
         margin:5em 20em 1em 20em;
     }
 
+    #carousel-container{
+        height:60%;
+    }
+  
+#footer-contenedor{
+    height:25em;
+}
     #footer-contenedor__webpage{
         position:relative;
         left:0%;
-        top:-47%;
+        top:-10%;
         height:10em;
         width:100%;
         display:flex;
@@ -980,12 +1018,10 @@ top:5em;
     #footer-webpage__logo-contenedor{
         display:flex;
         width:25em;
-        height:25em;
+        height:75%;
         position:relative;
-        bottom:12.35em;
-        left:35%;
         overflow-y: hidden;
-        margin-left:10%;
+        right:20%;
     
     }
 
@@ -993,9 +1029,25 @@ top:5em;
         width: 100%;
         height: 100%;
         object-fit:cover;
-        object-position:top left;
         position:relative;
-        top:10%;
+        
     }
 
+}
+
+@media only screen and (min-width: 1550px){
+
+    #carritoProductos-contenedor__capa1{
+        height:50%;
+    }
+
+    #footer-webpage__logo-contenedor{
+        right:50%;
+    }
+}
+
+@media only screen and (min-width: 1850px){
+    #carritoProductos-contenedor__capa1{
+        height:40%;
+    }
 }

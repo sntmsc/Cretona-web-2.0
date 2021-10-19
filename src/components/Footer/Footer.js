@@ -50,27 +50,29 @@ const FooterPagosDesktop = () =>{
   }
 
   const FooterInfoFinal = () =>{
-    const EsDesktop = useMediaQuery({ query: '(min-width:1250px)' })
+    
     return(
       <div id="footer-contenedor__webpage">
         <span id="footer-webpage__creador-span">© Cretona Socks web page by Sntmsc Producciones. </span>
-        {EsDesktop && 
-          <div id="footer-webpage__logo-contenedor">
-            <img id="footer-webpage__logo-img" src="/img/logo002.png" alt="logo de cretona socks"/>
-          </div>
-        }
       </div>
     )
   }
   
   const Footer = () => {
+    const EsDesktop = useMediaQuery({ query: '(min-width:1250px)' })
     return(
       
       <footer>
           <div id="footer-contenedor"> 
               <div id="footer-contenedor__menu">
+
                 <FooterPagosDesktop/>
                   <div id="footer-contenedor__izqder">
+                  {EsDesktop && 
+                    <div id="footer-webpage__logo-contenedor">
+                      <img id="footer-webpage__logo-img" src="/img/logo002.png" alt="logo de cretona socks"/>
+                    </div>
+                  }
                      <FooterMenuIzquierda/>
                      <FooterMenuDerecha/>
                   </div>
