@@ -53,7 +53,7 @@ const FooterPagosDesktop = () =>{
     
     return(
       <div id="footer-contenedor__webpage">
-        <span id="footer-webpage__creador-span">© Cretona Socks web page by Sntmsc Producciones. </span>
+        <span id="footer-webpage__creador-span">© Cretona Socks web page by Hamber Santiago </span>
       </div>
     )
   }
