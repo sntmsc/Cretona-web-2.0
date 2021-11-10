@@ -995,7 +995,7 @@ top:5em;
     }
 
     #carousel-container{
-        height:60%;
+        height:80%;
     }
   
 #footer-contenedor{
@@ -1044,10 +1044,16 @@ top:5em;
     #footer-webpage__logo-contenedor{
         right:50%;
     }
+    #carousel-container{
+        height:70%;
+    }
 }
 
 @media only screen and (min-width: 1850px){
     #carritoProductos-contenedor__capa1{
         height:50%;
+    }
+    #carousel-container{
+        height:60%;
     }
 }
