@@ -3,7 +3,7 @@ import {readRemoteFile} from 'react-papaparse';
 
 
 
-export default function Carousel({imgSheet,click, onClose}){
+export default function Carousel({imgSheet,click, onClose, mainImg}){
 
     const [visible, setVisible] = useState(false)
 
@@ -49,8 +49,8 @@ export default function Carousel({imgSheet,click, onClose}){
     const [selectedImage, setSelectedImage] = useState('');
 
     useEffect( () =>{
-        setSelectedImage(images[selectedIndex])
-    },[images, selectedIndex])
+        setSelectedImage(mainImg)
+    },[mainImg])
     
     const [loaded, setLoaded] = useState(false);
   

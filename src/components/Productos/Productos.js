@@ -9,6 +9,7 @@ const Productos = ({googSheet, category}) =>{
 
     const [imgs, setImgs] = useState([])
     const [sheetCarousel, setSheetCarousel] = useState('')
+    const [mainImg, setMainImg] = useState('');
     const [toggleCarousel, setToggleCarousel] = useState(false)
     const {compras, setCompras} = useContext(ContextCompras)
     const {carritoToggle, setCarritoToggle} = useContext(CartVisible)
@@ -32,6 +33,7 @@ const Productos = ({googSheet, category}) =>{
                   onClick={ () => {
                     setSheetCarousel(x.SHEET)
                     setToggleCarousel(true)
+                    setMainImg(x.URL)
                   }}/>
                   <span className="productos-galeria__descripcion">{x.DESCRIPCION}<br/>${x.PRECIO}</span>
                   <button className="productos-galeria__agregarCarrito" onClick={()=> {setCompras([...compras,{imagen: x.URL,categoria: category, desc: x.DESCRIPCION, precio: x.PRECIO }]);
@@ -42,7 +44,7 @@ const Productos = ({googSheet, category}) =>{
     
     return(
       <section id="productos">
-          <Carousel imgSheet={sheetCarousel} click={toggleCarousel} onClose = {()=>setToggleCarousel(false)}/>
+          <Carousel imgSheet={sheetCarousel} mainImg={mainImg} click={toggleCarousel} onClose = {()=>setToggleCarousel(false)}/>
       <div className="productos-contenedor">
           <h2 >Medias para {category}</h2>
           <div className="productos-galeria">
