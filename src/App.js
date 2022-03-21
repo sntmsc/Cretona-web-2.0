@@ -19,13 +19,14 @@ const App = () => {
   const sheetJuveniles = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQQ7L_2xLs_e_bm0_UfKg1ylh25UGRRxJZEb7H2Oyl5aVAM3AE_4Bc6YEK7lxNDBA-EDGjP9H3bLl8r/pub?gid=0&single=true&output=csv'
   const sheetNiñxs = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRNSdWjpe2LlMFYSNrIxTYHvEjP_mn4E1KmetBqhnbY-SlLjBz_Xt2TfdEWhRw7C99atpZ7grNKlwvI/pub?gid=0&single=true&output=csv'
   const esMobile = useMediaQuery({query : '(max-width:850px)'})
+
   return (
   <BrowserRouter>
     <div className="App">
     <Compras>
       <CarritoVisible> 
       <MenuVisible>
-          <Navbar/>
+          <Navbar />
           <CarritoProductos/>
           {esMobile && 
             <MenuMobile/>
@@ -34,14 +35,20 @@ const App = () => {
       <LogoPrincipal/>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/adultxs">
-           <Productos googSheet={sheetAdultxs} category={'Adultxs'}/> 
+        <Route path="/adultxs" key='adultxs'>
+           <Productos
+           googSheet={sheetAdultxs}
+           category={'Adultxs'}/> 
         </Route>
-        <Route path="/juveniles">
-           <Productos googSheet={sheetJuveniles} category={'Juveniles'}/> 
+        <Route path="/juveniles" key='juveniles'>
+           <Productos
+           googSheet={sheetJuveniles}
+           category={'Juveniles'}/> 
         </Route>
-        <Route path="/ninxs">
-           <Productos googSheet={sheetNiñxs} category={'Niñxs'}/> 
+        <Route path="/ninxs" key='ninxs'>
+           <Productos
+           googSheet={sheetNiñxs}
+           category={'Niñxs'}/> 
         </Route>
 
         <Route path="/quiensoy" component={QuienSoy} />

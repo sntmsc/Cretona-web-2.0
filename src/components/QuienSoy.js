@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const PresentacionPersonal = () =>{
     return(
@@ -31,8 +31,25 @@ const PresentacionCretona = () =>{
 }
 
 const QuienSoy = () => {
+    const [isMounted, setIsMounted] = useState(false);
+    const ref = useRef();
+
+    useEffect(()=>{
+        setIsMounted(true);
+    },[]);
+
+    useEffect(()=>{
+        if(ref){
+          window.scrollTo({
+            top: ref.current.offsetTop,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
+      },[isMounted])
+
     return(
-      <section id="quiensoy">
+      <section id="quiensoy" ref={ref}>
         <div id="quiensoy-contenedortotal">
           <PresentacionPersonal/>
           <PresentacionCretona/>

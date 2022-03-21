@@ -5,12 +5,15 @@ import { useMediaQuery } from 'react-responsive'
 import { MenuVisibleContext } from './Context/MenuVisible';
 
 const NavbarMenu = () => {
+
   const {menuToggle,setMenuToggle} = useContext(MenuVisibleContext)
   const noEsMobile = useMediaQuery({ query: '(min-width:850px)' })
   const EsMobile = useMediaQuery({query : '(max-width:850px)'})
+
   const menuMobileToggle = () =>{
     setMenuToggle(!menuToggle);
   }
+
     return(
       <nav id="navbar-container__nav"> 
       {noEsMobile && 
@@ -21,7 +24,7 @@ const NavbarMenu = () => {
             <li id="navdesktop-menu__productos">
               <span style={{cursor:"pointer"}} id="navdesktop-productos__texto" className="navdesktop-menu">Mis productos</span>
                     <ul id="navdesktop-productos__submenu">
-                      <Link to='/adultxs' style={{textDecoration: 'none'}}>
+                      <Link to='/adultxs' style={{textDecoration: 'none'}} >
                         <li>Adultxs</li>
                       </Link>
                       <Link to='/juveniles' style={{textDecoration: 'none'}}>
@@ -80,7 +83,7 @@ const NavbarMenu = () => {
     return(
         <section id="navbar">
             <div id="navbar-container">
-                <NavbarMenu/>
+                <NavbarMenu />
                 <NavbarRedes/>
                 <CarritoLogo/>
             </div>
